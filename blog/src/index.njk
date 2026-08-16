@@ -1,0 +1,63 @@
+---
+layout: base.njk
+title: Home
+description: Ronish's software engineering posts.
+---
+
+<section class="intro">
+
+  <h1>
+    My Knowledges
+  </h1>
+
+  <p>
+    I'm Ronish, a computer science student interested in backend engineering and understanding how things works underneath.
+  </p>
+
+</section>
+
+
+<section>
+
+  <h2>
+    Articles
+  </h2>
+
+
+  <div class="article-list">
+
+    {% for post in collections.posts | reverse %}
+
+      <a
+        class="article-item"
+        href="{{ post.url }}"
+      >
+
+        <div>
+
+          <h3>
+            {{ post.data.title }}
+          </h3>
+
+          {% if post.data.description %}
+
+            <p>
+              {{ post.data.description }}
+            </p>
+
+          {% endif %}
+
+        </div>
+
+
+        <time>
+          {{ post.date | readableDate }}
+        </time>
+
+      </a>
+
+    {% endfor %}
+
+  </div>
+
+</section>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs by Ronish</title>
+
+    <!-- Fonts: Space Grotesk (Headings) & Inter (Body) & Fira Code (Tech details) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="../script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Subtle Background Noise overlay for a non-digital, tactile feel -->
+    <div class="noise-overlay"></div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo"></a>
+            <div class="nav-right">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="display: none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Index Section -->
+    <main class="section container">
+        <h1 class="text-center" style="margin-bottom:2rem;">Blog</h1>
+        <p class="text-center mono" style="margin-bottom:3rem;">Reflections, life experiences, and stories from my
+            journey.</p>
+
+        <div class="grid-2">
+            <!-- Blog Card 1 -->
+            <div class="card fade-up">
+                <h2 class="accent">My Journey</h2>
+                <p>My journey didn’t start with grand ambitions or lofty goals. It started with curiosity and a desire
+                    to..</p>
+                <p class="mono">Feb 20, 2026</p>
+                <a href="my-journey.html" class="btn btn-outline">Read</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Scroll reveal animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+/* =========================================
+   BLOG & ARTICLE SPECIFIC STYLES
+========================================= */
+
+/* Narrower container for comfortable reading (65-75 chars per line) */
+.article-container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 100px 2rem 4rem;
+    /* Offset for sticky nav */
+}
+
+/* Header */
+.article-header {
+    margin-bottom: 3rem;
+    border-bottom: 1px dashed var(--border);
+    padding-bottom: 2rem;
+}
+
+.article-tags {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.tag {
+    font-family: var(--font-mono);
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    padding: 0.2rem 0.8rem;
+    font-size: 0.75rem;
+    color: var(--text-main);
+}
+
+.article-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+}
+
+.article-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-family: var(--font-mono);
+    color: var(--text-mut);
+}
+
+/* Hero Image */
+.article-hero {
+    margin-bottom: 4rem;
+}
+
+.article-hero img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--border);
+    background: var(--bg-surface);
+}
+
+.article-hero figcaption {
+    margin-top: 0.8rem;
+    color: var(--text-mut);
+    text-align: center;
+}
+
+/* Article Typography (The body of the blog) */
+.article-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-main);
+    font-family: var(--font-main);
+}
+
+.article-content p,
+.article-content ul,
+.article-content ol,
+.article-content blockquote {
+    margin-bottom: 1.8rem;
+}
+
+.article-content h2 {
+    font-size: 1.8rem;
+    margin: 3.5rem 0 1.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+.article-content h3 {
+    font-size: 1.4rem;
+    margin: 2rem 0 1rem;
+}
+
+.article-content a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 4px;
+}
+
+.article-content a:hover {
+    color: var(--text-main);
+    text-decoration-style: solid;
+}
+
+.article-content ul {
+    padding-left: 1.5rem;
+}
+
+.article-content li {
+    list-style: square;
+    margin-bottom: 0.5rem;
+    color: var(--text-mut);
+}
+
+.article-content li strong {
+    color: var(--text-main);
+}
+
+/* Inline Code */
+.article-content code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    padding: 0.1rem 0.4rem;
+    border-radius: 2px;
+    color: var(--accent);
+}
+
+/* Blockquotes */
+.article-content blockquote {
+    border-left: 4px solid var(--accent);
+    padding: 1rem 1.5rem;
+    background: var(--bg-surface);
+    font-style: italic;
+    color: var(--text-mut);
+    font-size: 1.2rem;
+}
+
+/* Developer Chic Code Blocks */
+.code-block-wrapper {
+    margin: 2.5rem 0;
+    border: 1px solid var(--border);
+    background: var(--bg-surface);
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
+    /* Subtle brutalist shadow */
+}
+
+/* Dark mode shadow adjustment */
+.code-block-wrapper {
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.8);
+}
+
+.code-block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px dashed var(--border);
+    background: var(--bg-main);
+}
+
+.mac-dots {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.mac-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+}
+
+.article-content pre {
+    margin: 0;
+    padding: 1.5rem;
+    overflow-x: auto;
+}
+
+.article-content pre code {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Author Footer */
+.article-footer {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+.author-card {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    padding: 2rem;
+}
+
+.author-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+.author-info p {
+    color: var(--text-mut);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .article-title {
+        font-size: 2.5rem;
+    }
+
+    .author-card {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+}
