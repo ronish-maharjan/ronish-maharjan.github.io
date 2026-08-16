@@ -2,54 +2,69 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta
-    name="description"
-    content="{{ description or 'Ronish — software engineering notes.' }}"
-  >
+    <meta name="description" content="{{ description or 'Ronish Maharjan software engineering blogs.' }}">
 
-<title> {{ title }} </title>
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:url" content="https://blog.ronishmaharjan.info.np{{ page.url }}">
+    <meta property="og:site_name" content="Ronish Maharjan">
 
-  <link rel="stylesheet" href="/css/style.css">
+    {% if layout == "post.njk" %}
+    <meta property="og:type" content="article">
+    {% else %}
+    <meta property="og:type" content="website">
+    {% endif %}
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ description }}">
+
+   <!-- Favicons -->
+    <link rel="icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+    <title> {{ title }} </title>
+
+    <link rel="stylesheet" href="/css/style.css">
 
 </head>
 
 <body>
 
-<header class="site-header">
+    <header class="site-header">
 
-  <div class="container header-inner">
+        <div class="container header-inner">
 
-    <a class="site-name" href="/">
-      Ronish Maharjan
-    </a>
+            <a class="site-name" href="/">
+                Ronish Maharjan
+            </a>
 
-    {% if isPost %}
+            {% if isPost %}
 
-      <a class="back-link" href="/">
-        ← Articles
-      </a>
+            <a class="back-link" href="/">
+                ← Articles
+            </a>
 
-    {% endif %}
+            {% endif %}
 
-  </div>
+        </div>
 
-</header>
+    </header>
 
 
-<main class="container">
+    <main class="container">
 
-  {{ content | safe }}
+        {{ content | safe }}
 
-</main>
+    </main>
 
-<script src="/js/copy.js"></script>
+    <script src="/js/copy.js"></script>
 </body>
 
 </html>
