@@ -361,7 +361,7 @@ Before jumping on this lets learn one more term called "Tick". A tick occurs at 
 
 Actually Process.nextTick is part of node.js not libuv library. Each time it encounters this code in initial phase it push the callback in the **processNextTick queue.** And before handing the control to libuv it first checks the processNextTick queue if there exist any callbacks executes them immediately and then move on to next phase.
 
-![Process Next Tick Figure](/images/process-tick.png)
+![Process Next Tick Figure](/assets/process-tick.png)
 
 Here, you can see that `process.nextTick()` callbacks are executed whenever Node.js is about to hand control back to libuv.
 
