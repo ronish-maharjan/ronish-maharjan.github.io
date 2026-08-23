@@ -12,7 +12,7 @@
 
         <meta property="og:description" content="{% block og_description %}Ronish Maharjan software engineering blogs.{% endblock og_description %}" >
 
-        <meta property="og:url" content="{{ config.base_url }}">
+        <meta property="og:url" content="{% block og_url %}{{ config.base_url }}{% endblock og_url %}" >
 
         <meta property="og:site_name" content="Ronish Maharjan">
 

@@ -8,6 +8,24 @@
     {{ page.description }}
 {% endblock description %}
 
+
+{% block og_title %}
+    {{ page.title }}
+{% endblock og_title %}
+
+{% block og_description %}
+    {{ page.description }}
+{% endblock og_description %}
+
+{% block og_url %}
+    {{ page.permalink }}
+{% endblock og_url %}
+
+{% block og_type %}
+    <meta property="og:type" content="article">
+{% endblock og_type %}
+
+
 {% block header_nav %}
 
     <a class="back-link" href="{{ get_url(path='/') }}">
@@ -15,6 +33,7 @@
     </a>
 
 {% endblock header_nav %}
+
 
 {% block content %}
 
