@@ -1,76 +1,79 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="{% block description %}Ronish Maharjan software engineering blogs.{% endblock description %}" >
+        <meta name="description" content="{% block description %}Ronish Maharjan software engineering blogs.{% endblock description %}" >
 
-    <meta property="og:title" content="{% block og_title %}Ronish Maharjan{% endblock og_title %}">
+        <meta property="og:title" content="{% block og_title %}Ronish Maharjan{% endblock og_title %}">
 
-    <meta property="og:description" content="{% block og_description %}Ronish Maharjan software engineering blogs.{% endblock og_description %}" >
+        <meta property="og:description" content="{% block og_description %}Ronish Maharjan software engineering blogs.{% endblock og_description %}" >
 
-    <meta property="og:url" content="{{ config.base_url }}">
+        <meta property="og:url" content="{{ config.base_url }}">
 
-    <meta property="og:site_name" content="Ronish Maharjan">
+        <meta property="og:site_name" content="Ronish Maharjan">
 
-    {% block og_type %}
+        {% block og_type %}
         <meta property="og:type" content="website">
-    {% endblock og_type %}
+        {% endblock og_type %}
 
-    <meta name="twitter:card" content="summary">
+        <meta name="twitter:card" content="summary">
 
-    <meta name="twitter:title" content="{% block twitter_title %}Ronish Maharjan{% endblock twitter_title %}" >
+        <meta name="twitter:title" content="{% block twitter_title %}Ronish Maharjan{% endblock twitter_title %}" >
 
-    <meta name="twitter:description" content="{% block twitter_description %}Ronish Maharjan software engineering blogs.{% endblock twitter_description %}" >
+        <meta name="twitter:description" content="{% block twitter_description %}Ronish Maharjan software engineering blogs.{% endblock twitter_description %}" >
 
-    <!-- Favicons -->
+        <!-- Favicons -->
 
-    <link rel="icon" href="{{ get_url(path='assets/favicon.ico') }}">
+        <link rel="icon" href="{{ get_url(path='assets/favicon.ico') }}">
 
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path='assets/favicon-16x16.png') }}" >
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path='assets/favicon-16x16.png') }}" >
 
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path='assets/favicon-32x32.png') }}" >
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path='assets/favicon-32x32.png') }}" >
 
-    <link rel="apple-touch-icon" href="{{ get_url(path='assets/apple-touch-icon.png') }}" >
+        <link rel="apple-touch-icon" href="{{ get_url(path='assets/apple-touch-icon.png') }}" >
 
-    <title>
-        {% block title %}Ronish Maharjan{% endblock title %}
-    </title>
+        <link rel="alternate" type="application/rss+xml" title="Ronish Blogs" href="{{ get_url(path='rss.xml') }}" >
 
-    <link
-        rel="stylesheet"
-        href="{{ get_url(path='style.css') }}"
-    >
-</head>
+        <title>
+            {% block title %}Ronish Maharjan{% endblock title %}
+        </title>
 
-<body>
+        <link
+                rel="stylesheet"
+                href="{{ get_url(path='style.css') }}"
+                >
+    </head>
 
-    <header class="site-header">
+        <body>
 
-        <div class="container header-inner">
+            <header class="site-header">
 
-            <a class="site-name" href="{{ get_url(path='/') }}">
-                Ronish Maharjan
-            </a>
+                <div class="container header-inner">
 
-            {% block header_nav %}{% endblock header_nav %}
+                    <a class="site-name" href="{{ get_url(path='/') }}">
+                        Ronish Maharjan
+                    </a>
 
-        </div>
+        {% block header_nav %}{% endblock header_nav %}
 
-    </header>
+                </div>
 
-    <main class="container">
+            </header>
 
-        {% block content %}{% endblock content %}
+        <main class="container">
 
-    </main>
+            {% block content %}{% endblock content %}
 
-<script src="{{ get_url(path='js/search.js') }}"></script>
-<script src="{{ get_url(path='js/copy.js') }}"></script>
+        </main>
 
-</body>
+        <script src="{{ get_url(path='js/search.js') }}"></script>
+        <script src="{{ get_url(path='js/copy.js') }}"></script>
+        <script src="{{ get_url(path='js/links.js') }}"></script>
+
+        </body>
 
 </html>

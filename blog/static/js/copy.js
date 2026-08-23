@@ -1,12 +1,22 @@
 document.querySelectorAll("pre").forEach((pre) => {
 
+    const wrapper = document.createElement("div");
+
+    wrapper.className = "code-block";
+
+    pre.parentNode.insertBefore(wrapper, pre);
+
+    wrapper.appendChild(pre);
+
+
     const button = document.createElement("button");
 
     button.className = "copy-button";
     button.type = "button";
     button.textContent = "Copy";
 
-    pre.appendChild(button);
+    wrapper.appendChild(button);
+
 
     button.addEventListener("click", async () => {
 
