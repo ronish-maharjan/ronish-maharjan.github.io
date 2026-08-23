@@ -1,11 +1,9 @@
----
-layout: post.njk
-title: How DNS Works
-description: Understanding DNS from a backend developer's perspective.
-date: 2026-08-16
-tags:
-  - posts
----
++++
+title= "How DNS Works"
+description= "Understanding DNS from a backend developer's perspective."
+date= 2026-08-16
+template="post.html"
++++
 >**Status: Ongoing**
 
 # **What is DNS?**
@@ -35,10 +33,10 @@ You may ask why we call it an **inverted tree**. It’s because the root node is
 Visualizing the Tree:
 Here is a simple view of how the tree looks:
 
-![DNS-hierarchy compared with unix file system](/assets/dns-hierarchy.png)
+![DNS-hierarchy compared with unix file system](./dns-hierarchy.png)
 *Figure 1: Comparision of DNS hierarchy with unix file system.*
 
-![DNS-hierarchy-Flow](/assets/dns-hierarchy-1.png)
+![DNS-hierarchy-Flow](./dns-hierarchy-1.png)
 *Figure 2: Flow of DNS hierarchy structure*
 
 Notice the key difference in how they are written. In Unix file systems, you
@@ -124,5 +122,5 @@ you can manage its DNS records from the domain name provider dashboard below is 
 provides authoritative nameservers for your domain, which serve these DNS
 records to DNS resolvers.
 
-![Configuring domain in cloudflare](/assets/configuring-domain.png) 
+![Configuring domain in cloudflare](./configuring-domain.png) 
 *Figure 3: Configuring a DNS record in Cloudflare's authoritative DNS service*

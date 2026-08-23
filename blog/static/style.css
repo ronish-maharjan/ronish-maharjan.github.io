@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
 
-
 :root {
   color-scheme: dark;
 
@@ -12,30 +11,21 @@
   --width: 760px;
 }
 
-
 * {
   box-sizing: border-box;
 }
-
 
 html {
   scroll-behavior: smooth;
 }
 
-
 body {
   margin: 0;
-
   background: var(--background);
   color: var(--foreground);
-
   font-family: "IBM Plex Sans", sans-serif;
-
   line-height: 1.7;
 }
-
-
-/* Layout */
 
 .container {
   width: min(
@@ -45,9 +35,6 @@ body {
 
   margin-inline: auto;
 }
-
-
-/* Header */
 
 .site-header {
   position: sticky;
@@ -61,7 +48,6 @@ body {
   backdrop-filter: blur(8px);
 }
 
-
 .header-inner {
   height: 64px;
 
@@ -70,7 +56,6 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
 
 .site-name {
   color: var(--foreground);
@@ -81,7 +66,6 @@ body {
   text-decoration: none;
 }
 
-
 .back-link {
   color: var(--muted);
 
@@ -90,25 +74,17 @@ body {
   text-decoration: none;
 }
 
-
 .back-link:hover {
   color: var(--foreground);
 }
-
-
-/* Main */
 
 main {
   padding-block: 80px;
 }
 
-
-/* Introduction */
-
 .intro {
   margin-bottom: 80px;
 }
-
 
 .intro h1 {
   margin: 0 0 20px;
@@ -120,7 +96,6 @@ main {
   letter-spacing: -0.05em;
 }
 
-
 .intro p {
   max-width: 650px;
 
@@ -130,9 +105,6 @@ main {
 
   font-size: 1.05rem;
 }
-
-
-/* Article list */
 
 section > h2 {
   margin: 0 0 20px;
@@ -148,11 +120,9 @@ section > h2 {
   color: var(--muted);
 }
 
-
 .article-list {
   border-top: 1px solid var(--border);
 }
-
 
 .article-item {
   display: flex;
@@ -171,7 +141,6 @@ section > h2 {
   text-decoration: none;
 }
 
-
 .article-item h3 {
   margin: 0;
 
@@ -179,7 +148,6 @@ section > h2 {
 
   font-weight: 500;
 }
-
 
 .article-item p {
   margin: 4px 0 0;
@@ -189,7 +157,6 @@ section > h2 {
   font-size: 0.9rem;
 }
 
-
 .article-item time {
   flex-shrink: 0;
 
@@ -198,13 +165,9 @@ section > h2 {
   font-size: 0.8rem;
 }
 
-
 .article-item:hover h3 {
   text-decoration: underline;
 }
-
-
-/* Article */
 
 .article {
   max-width: 700px;
@@ -212,11 +175,9 @@ section > h2 {
   margin-inline: auto;
 }
 
-
 .article-header {
   margin-bottom: 56px;
 }
-
 
 .article-header h1 {
   margin: 0 0 12px;
@@ -228,18 +189,15 @@ section > h2 {
   letter-spacing: -0.05em;
 }
 
-
 .article-header time {
   color: var(--muted);
 
   font-size: 0.85rem;
 }
 
-
 .article-content {
   font-size: 1.05rem;
 }
-
 
 .article-content h2 {
   margin-top: 56px;
@@ -249,23 +207,19 @@ section > h2 {
   line-height: 1.2;
 }
 
-
 .article-content h3 {
   margin-top: 40px;
 
   font-size: 1.25rem;
 }
 
-
 .article-content p {
   margin: 24px 0;
 }
 
-
 .article-content a {
   color: var(--foreground);
 }
-
 
 .article-content code {
   padding: 2px 5px;
@@ -278,7 +232,6 @@ section > h2 {
 
   font-size: 0.9em;
 }
-
 
 .article-content pre {
   overflow-x: auto;
@@ -296,7 +249,6 @@ section > h2 {
   line-height: 1.6;
 }
 
-
 .article-content pre code {
   padding: 0;
 
@@ -304,7 +256,6 @@ section > h2 {
 
   background: transparent;
 }
-
 
 .article-content blockquote {
   margin: 32px 0;
@@ -315,7 +266,6 @@ section > h2 {
 
   color: var(--foreground);
 }
-
 
 .article-content img {
   display: block;
@@ -353,7 +303,66 @@ section > h2 {
   color: var(--foreground);
 }
 
-/* Mobile */
+.articles-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+.articles-header h2 {
+    margin: 0;
+    font-weight:600;
+    text-transform:uppercase;
+    color: var(--muted);
+    font-size:0.95rem;
+}
+
+
+#search {
+    width: 220px;
+
+    padding: 8px 12px;
+
+    border: 1px solid var(--border);
+    border-radius: 5px;
+
+    background: #111;
+    color: var(--foreground);
+
+    font-family: inherit;
+    font-size: 0.85rem;
+
+    outline: none;
+}
+
+
+#search::placeholder {
+    color: var(--muted);
+}
+
+
+#search:focus {
+    border-color: #444;
+}
+
+@media (max-width: 600px) {
+
+    .articles-header {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    #search {
+        width: 100%;
+    }
+
+}
 
 @media (max-width: 600px) {
 
@@ -364,21 +373,17 @@ section > h2 {
     );
   }
 
-
   main {
     padding-block: 48px;
   }
-
 
   .intro {
     margin-bottom: 56px;
   }
 
-
   .article-item {
     display: block;
   }
-
 
   .article-item time {
     display: block;
@@ -387,3 +392,4 @@ section > h2 {
   }
 
 }
+

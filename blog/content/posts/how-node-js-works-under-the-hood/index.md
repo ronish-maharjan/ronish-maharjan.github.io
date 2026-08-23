@@ -1,11 +1,9 @@
----
-layout: post.njk
-title: Node.js Internals (How node.js works under the hood)
-description: Understanding Node.js internals in detail.
-date: 2026-06-05
-tags:
-  - posts
----
++++
+title= "Node.js Internals (How node.js works under the hood)"
+description= "Understanding Node.js internals in detail."
+date= 2026-06-05
+template="post.html"
++++
 
 > Note: This article is based on Node.js v26.3.0 and Libuv v1.48.0
 
@@ -126,7 +124,7 @@ There are different phases in the Event Loop and each phase have its one task to
 7.  Close Callback Phase
     
 
-![Event Loop Figure](/assets/event-loop.png)
+![Event Loop Figure](./event-loop.png)
 
 ### Initial Phase
 
@@ -361,7 +359,7 @@ Before jumping on this lets learn one more term called "Tick". A tick occurs at 
 
 Actually Process.nextTick is part of node.js not libuv library. Each time it encounters this code in initial phase it push the callback in the **processNextTick queue.** And before handing the control to libuv it first checks the processNextTick queue if there exist any callbacks executes them immediately and then move on to next phase.
 
-![Process Next Tick Figure](/assets/process-tick.png)
+![Process Next Tick Figure](./process-tick.png)
 
 Here, you can see that `process.nextTick()` callbacks are executed whenever Node.js is about to hand control back to libuv.
 

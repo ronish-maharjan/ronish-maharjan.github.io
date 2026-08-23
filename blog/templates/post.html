@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ page.title }}
+{% endblock title %}
+
+{% block description %}
+    {{ page.description }}
+{% endblock description %}
+
+{% block header_nav %}
+
+    <a class="back-link" href="{{ get_url(path='/') }}">
+        ← All Articles
+    </a>
+
+{% endblock header_nav %}
+
+{% block content %}
+
+<article class="article">
+
+    <header class="article-header">
+
+        <h1>
+            {{ page.title }}
+        </h1>
+
+        <time datetime="{{ page.date }}">
+            {{ page.date }}
+        </time>
+
+    </header>
+
+    <div class="article-content">
+
+        {{ page.content | safe }}
+
+    </div>
+
+</article>
+
+{% endblock content %}

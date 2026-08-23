@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Ronish Blogs
+{% endblock title %}
+
+{% block description %}
+    Ronish's software engineering posts.
+{% endblock description %}
+
+{% block content %}
+
+<section class="intro">
+
+    <h1>
+        My Knowledges
+    </h1>
+
+    <p>
+        I'm Ronish, a computer science student interested in
+        backend engineering and understanding how things works
+        underneath.
+    </p>
+
+</section>
+
+
+<section>
+
+    <div class="articles-header">
+
+        <h2>
+            Articles
+        </h2>
+
+        <input
+            type="search"
+            id="search"
+            placeholder="Search articles..."
+            autocomplete="off"
+        >
+
+    </div>
+
+
+    {% set posts = get_section(path="posts/_index.md") %}
+
+    <div class="article-list">
+
+        {% for post in posts.pages %}
+
+        <a
+            class="article-item"
+            href="{{ post.permalink }}"
+            data-title="{{ post.title | lower }}"
+        >
+
+            <div>
+
+                <h3>
+                    {{ post.title }}
+                </h3>
+
+                {% if post.description %}
+
+                <p>
+                    {{ post.description }}
+                </p>
+
+                {% endif %}
+
+            </div>
+
+
+            <time datetime="{{ post.date }}">
+                {{ post.date }}
+            </time>
+
+        </a>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock content %}

@@ -1,11 +1,9 @@
----
-layout: post.njk
-title: SSH (Last guide you need)
-description: Dont be afraid to use ssh. 
-date: 2026-07-16
-tags:
-  - posts
----
++++
+title= "SSH (Last guide you need)"
+description= "Dont be afraid to use ssh. "
+date= 2026-07-16
+template="post.html"
++++
 
 # secure shell (ssh)
 
